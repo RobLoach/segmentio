@@ -134,7 +134,6 @@ function segmentio_segmentio_node($page = array()) {
     $arg1 = arg(1);
     if (is_numeric($arg1)) {
       $node = node_load($arg1);
-      dsm($node);
       $code = 'window.analytics.page("@type","@name",!properties);';
       $properties = array(
         'nid' => $node->nid,
