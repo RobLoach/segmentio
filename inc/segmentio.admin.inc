@@ -42,5 +42,14 @@ function segmentio_admin_settings_form($form_state) {
     '#default_value' => variable_get('segmentio_privacy', 1),
   );
 
+  // Tracking settings
+  $form['advanced']['segmentio_track'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Track Settings'),
+    '#options' => module_invoke_all('segmentio_info'),
+    '#default_value' => variable_get('segmentio_track', array()),
+    '#description' => t('Select which additional information should be tracked.'),
+  );
+
   return system_settings_form($form);
 }
