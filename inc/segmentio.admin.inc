@@ -21,7 +21,7 @@ function segmentio_admin_settings_form($form_state) {
     '#type' => 'textfield',
     '#default_value' => variable_get('segmentio_write_key', ''),
     '#size' => 15,
-    '#maxlength' => 20,
+    '#maxlength' => 200,
     '#required' => TRUE,
     '#description' => t('This Write Key is unique to each Project you have configured in <a href="@segmentio">Segment.io</a>. To get a Write Key, <a href="@analyticsjs">register your Project with Segment.io</a>, or if you already have registered your site, go to your Segment.io Project Settings page.analyticsjs will use this write key to send data to your project.', array('@segmentio' => 'https://segment.io/login', '@analyticsjs' => 'https://segment.io/login')),
   );
